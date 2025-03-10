@@ -1,7 +1,7 @@
 {
   "name": "react-app",
   "private": true,
-  "homepage": "https://github.com/TreC00L/my-react-project.git",
+  "homepage": "https://TreC00L.github.io/my-react-project",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
