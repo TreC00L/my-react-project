@@ -1,0 +1,204 @@
+.time {
+  position: fixed;  /* Fixes the footer in place */
+  bottom: 0;        /* Sticks it to the bottom */
+  left: 0;          /* Aligns to the left */
+  font-size: 150%;  /* Increases text size */
+  color: #2c2b2b62;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  background-color: white; /* Optional: ensures visibility */
+  width: 100%; /* Makes it span the entire bottom */
+  text-align: left; /* Aligns text to the left */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {.time {
+  position: fixed;  /* Fixes the footer in place */
+  bottom: 0;        /* Sticks it to the bottom */
+  left: 0;          /* Aligns to the left */
+  font-size: 150%;  /* Increases text size */
+  color: #2c2b2b62;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  background-color: white; /* Optional: ensures visibility */
+  width: 100%; /* Makes it span the entire bottom */
+  text-align: left; /* Aligns text to the left */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+}
+
+  background-image: url('/assets/mainbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  border: 3px solid hsl(49, 75%, 49%);
+  background-color: hsl(0, 78%, 23%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  animation: fadeIn 0.8s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 15px hsla(0, 0%, 0%, 0.2);
+}
+
+.card-image{
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px hsl(0, 1%, 28%);
+  border: none;
+}
+
+/* Enlarged Image (150% scale, but controlled size) */
+.card-image-full {
+  width: 400%;
+  max-width: 500px; /* Prevents it from being too large */
+  height: auto;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-image-full:hover {
+  transform: perspective(500px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Styling */
+.card .card-title {
+  font-family: Arial, sans-serif;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 2px 2px hsla(0, 42%, 13%, 0.342);
+  font-size: medium;
+}
+
+.card .card-paragraph {
+  color: hsl(0, 0%, 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-tre {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 2px #221d1d7a;
+}
+
+/* Button Styling */
+.Button-text, .close-btn {
+  background: #ffbb00;
+  box-shadow: 5px 5px 5px rgb(109, 29, 29);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  position: relative;
+  left: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn {
+  background: #dc3545;
+}
+
+.Button-text:hover {
+  background: #b30000;
+}
+
+.close-btn:hover {
+  background: #c82333;
+}
+
+/* Button Hover Effect */
+.Button-text:hover {
+  background-color: rgb(46, 8, 8);
+  transform: scale(1.1);
+}
+
+/* Apply fade-in animation */
+.modal-overlay {
+  animation: fadeIn 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 300px;
+}
+
+/* Close Button (below the image) */
+.button1 {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+  background: #c82333;
+}
+
+/* Modal1 Overlay (background remains, but image doesn’t take over) */
+.modal1-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}

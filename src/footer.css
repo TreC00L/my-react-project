@@ -1,0 +1,19 @@
+.footer {
+    position: fixed;  /* Keeps it stuck to the bottom */
+    bottom: 0;        /* Stays at the bottom */
+    left: 0;          /* Aligns to the left */
+    width: 100%;      /* Stretches across the full width */
+    background-color: white; /* Keeps it visible */
+    padding: 15px 20px; /* Adds padding inside */
+    text-align: center; /* Centers the content */
+    font-size: 1.2rem; /* Adjusts text size */
+    color: #2c2b2b62;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 2px solid #ccc; /* Optional: Adds a border on top */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+  }
+  
+  .time {
+    margin: 0; /* Removes unnecessary margin */
+  }
+  
