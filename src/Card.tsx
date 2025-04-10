@@ -25,7 +25,7 @@ function Card() {
     return (
         <>
             <div className="card">
-                <a href="#" onClick={(e) => { e.preventDefault(); setIsModalOpen(true); }}>
+            <a href="#" onClick={(e) => { setIsModalOpen(true); }}>
                     {/* Rotating profile image */}
                     <img
                         className="card-image"
@@ -47,16 +47,13 @@ function Card() {
 
             {/* Modal for full-size image (NO rotation) */}
             {isModalOpen && (
-    <div className="modal1-overlay" onClick={(e) => {
-        if ((e.target as HTMLElement).classList.contains("modal1-overlay")) {
-            setIsModalOpen(false);
-        }
-    }}>
-        <img className="card-image-full" src={pifPic} alt="Full profile" />
-        <button className="button1" onClick={() => setIsModalOpen(false)}>Close</button>
-    </div>
-)}
-
+                <div className="modal1-overlay">
+                    <div className="modal1-content">
+                        <img className="card-image-full" src={pifPic} alt="Full profile" />
+                        <button className="button1" onClick={() => setIsModalOpen(false)}>Close</button>
+                    </div>
+                </div>
+            )}
         </>
     );
 }

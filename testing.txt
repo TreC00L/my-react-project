@@ -1,0 +1,2 @@
+const food1
+it's like a local variable

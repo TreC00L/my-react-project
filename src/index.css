@@ -83,15 +83,16 @@ body {.time {
 /* Enlarged Image (150% scale, but controlled size) */
 .card-image-full {
   width: 400%;
+  position: relative;
+  left: -150px;
   max-width: 500px; /* Prevents it from being too large */
   height: auto;
   border-radius: 20px;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-image-full:hover {
-  transform: perspective(500px) scale(1.1);
+  transform: perspective(500px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -131,6 +132,10 @@ body {.time {
 
 .close-btn {
   background: #dc3545;
+  position: relative;
+  right: 10px;
+  box-shadow: none;
+  left: 5px;
 }
 
 .Button-text:hover {
