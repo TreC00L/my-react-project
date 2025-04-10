@@ -21,26 +21,27 @@ function Card() {
     return (
         <>
             <div className="card">
-                <a 
-                    href="#" 
-                    onClick={() => { 
-                        e.preventDefault(); 
-                        setIsModalOpen(true); 
-                    }}
-                    aria-label="View full profile picture" // Better accessibility
-                >
-                    <img
-                        className="card-image"
-                        src={pifPic}
-                        alt="profile picture"
-                        onMouseMove={handleMouseMove}
-                        onMouseLeave={resetRotation}
-                        style={{
-                            transform: `perspective(500px) rotateY(${rotate}deg) scale(1.05)`,
-                            transition: "transform 0.2s ease-out",
-                        }}
-                    />
-                </a>
+            <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  }}
+  aria-label="View full profile picture"
+>
+  <img
+    className="card-image"
+    src={pifPic}
+    alt="profile picture"
+    onMouseMove={handleMouseMove}
+    onMouseLeave={resetRotation}
+    style={{
+      transform: `perspective(500px) rotateY(${rotate}deg) scale(1.05)`,
+      transition: "transform 0.2s ease-out",
+    }}
+  />
+</a>
+
                 <h2 className="card-title">Tre Cool M. Madlos</h2>
                 <p className="card-paragraph">
                     2nd Year Senior Highschool in Liceo De Cagayan University.
