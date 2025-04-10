@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "tsc -b && vite build && gh-pages -d dist"
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
   },
   "dependencies": {
     "react": "^19.0.0",
