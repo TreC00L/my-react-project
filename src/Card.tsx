@@ -1,32 +1,34 @@
 import { useState } from "react";
 import pifPic from "./assets/kokong 2x2.jpg";
-import "./Card.css"; // Import the CSS file
+import "./Card.css";
 
 function Card() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [rotate, setRotate] = useState(0);
 
-    // Handle mouse movement over the small profile image
     const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
         const card = e.currentTarget;
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left; // Mouse position inside the card
+        const x = e.clientX - rect.left;
         const center = rect.width / 2;
-        const rotateY = ((x - center) / center) * 10; // Adjust rotation angle
+        const rotateY = ((x - center) / center) * 10;
 
         setRotate(rotateY);
     };
 
-    // Reset rotation when mouse leaves
-    const resetRotation = () => {
-        setRotate(0);
-    };
+    const resetRotation = () => setRotate(0);
 
     return (
         <>
             <div className="card">
-            <a href="#" onClick={(e) => { setIsModalOpen(true); }}>
-                    {/* Rotating profile image */}
+                <a 
+                    href="#" 
+                    onClick={() => { 
+                        e.preventDefault(); 
+                        setIsModalOpen(true); 
+                    }}
+                    aria-label="View full profile picture" // Better accessibility
+                >
                     <img
                         className="card-image"
                         src={pifPic}
@@ -45,12 +47,17 @@ function Card() {
                 </p>
             </div>
 
-            {/* Modal for full-size image (NO rotation) */}
             {isModalOpen && (
                 <div className="modal1-overlay">
                     <div className="modal1-content">
                         <img className="card-image-full" src={pifPic} alt="Full profile" />
-                        <button className="button1" onClick={() => setIsModalOpen(false)}>Close</button>
+                        <button 
+                            className="button1" 
+                            onClick={() => setIsModalOpen(false)}
+                            aria-label="Close modal"
+                        >
+                            Close
+                        </button>
                     </div>
                 </div>
             )}
